@@ -1,0 +1,122 @@
+                                                                            WORKSHEET 2
+                                                                              PYTHON
+
+
+Q1 to Q8 have only one correct answer. Choose the correct option to answer your question.
+1. Which of the following is not a core datatype in python?
+A) list                      B) struct
+C) tuple                     C) set
+
+Ans- B) struct
+
+2. Which of the following is an invalid variable name in python?
+A) _init_                   B) no_1
+C) 1_no                     D) _1
+
+Ans- C) 1_no 
+
+3.Which one of the following is a keyword in python?
+A) in                       B) _init_
+C) on                       D) foo
+
+Ans- A) in
+
+4. In which of the following manner are the operators of the same precedence executed in python?
+A) Left to Right            B) BODMAS
+C) Right to Left            D) None of these
+
+Ans- B) BODMAS
+
+5. Arrange the following in decreasing order of the precedence when they appear in an expression in python?
+i) Multiplication ii) Division iii) Exponential iv) Parentheses
+A) iii – iv – ii – i        B) iii – iv – i – ii
+C) iv – iii – ii – i        D) iii – ii – i – iv
+
+Ans- C) iv – iii – ii – i
+
+6. (28//6)**3/3%3 = ?
+A) 7.1111…                  B) 0
+C) 0.3333…                  D) 1
+
+Ans- C) 0.3333…
+
+7. Which of the following is not equal to x16 ?
+A) x**4**4                 B) x**16
+C) x^16                    D) (x**4)**4
+
+Ans- A) x**4**4
+
+8. a = input(“Enter an integer”). What will be the data type of a?
+A) int                     B) str
+C) float                   D) double
+
+Ans - B) str
+
+Q9 and Q10 have multiple correct answers. Choose all the correct options to answer your question.
+9. Which of the following statements are correct?
+A) Division and multiplication have same precedence in python
+B) Python’s operators’ precedence is based on PEDMAS
+C) Python’s operators’ precedence is based on VBODMAS
+D) In case of operators’ having same precedence, the one on the left side is executed first.
+
+Ans- 
+A) Division and multiplication have same precedence in python
+D) In case of operators’ having same precedence, the one on the left side is executed first.
+
+10. Which of the following is(are) valid statement(s) in python? 
+A) abc = 1,000,000          B) a b c = 1000 2000 3000 
+C) a,b,c = 1000, 2000, 3000 D) a_b_c = 1,000,000
+
+Ans- A) abc = 1,000,000
+     C) a,b,c = 1000, 2000, 3000
+     D) a_b_c = 1,000,000
+
+Q11 to Q13 are subjective questions, answer them briefly
+
+11. Differentiate between a list, tuple, set and dictionary
+
+Ans - 
+List:- It is simplest data structure in Python and is used to store a list of values. Lists are collections of items (strings, integers, or even other lists).Each item in the list has an assigned index value.Lists are enclosed in [ ].
+Tuple:- A tuple is a sequence of values much like a list. The values stored in a tuple can be any type, and they are indexed by integers.The important difference is that tuples are immutable.Lists are enclosed in ( ).
+Set:Set elements are unique. Duplicate elements are not allowed.It is unorderd.
+Dictionary:Dictionary elements are accessed via keys.Use {} curly brackets to construct the dictionary, and [] square brackets to index it.
+
+12. Are strings mutable in python? Suppose you have a string “I+Love+Python”, write a small code to replace ‘+’ with space in python.
+
+Ans- No,strings are immutable in python.
+
+Word = "I+Love+Python"  
+print(Word.replace("+", " ")) 
+
+O/P- I Love Python
+
+13. What does the function ord() do in python? Explain with example. Also, write down the function for getting the datatype of a variable in python.
+
+Ans- The ord() function in Python accepts a string of length 1 as an argument and returns the unicode code point representation of the passed argument.
+
+for eg: ord('A') is 65 which is the ASCII value. 
+
+type(ord('B'))
+o/p- int
+
+Q14 and Q15 are programming questions. Answer them in Jupyter Notebook.
+
+14. Write a python program to solve a quadratic equation of the form 𝑎𝑥2+𝑏𝑥+𝑐=0. Where a, b and c are to be taken by user input. Handle the erroneous input, such as ‘a’ should not be equal to 0.
+
+Ans- 
+
+import cmath  
+a = float(input('Enter a: '))  
+b = float(input('Enter b: '))  
+c = float(input('Enter c: '))  
+    
+d = (b**2) - (4*a*c)    
+eq1 = (-b-cmath.sqrt(d))/(2*a)  
+eq2 = (-b+cmath.sqrt(d))/(2*a)  
+print('The solution are {0} and {1}'.format(eq1,eq2)) 
+
+15. Write a python program to find the sum of first ‘n’ natural numbers without using any loop. Ask user to input the value of ‘n’.
+
+Ans- 
+n=int(input("Enter a number: "))
+n * (n+1) / 2

@@ -1,0 +1,104 @@
+In Q1 to Q9, only one option is correct, Choose the correct option:
+
+1.Which of the following extracts information from user generated content
+
+Answer 1: -  B) Web scraping
+
+2.Which of the following is not a web scraping library in python?	
+
+Answer 2: - C) Requests
+
+3.Selenium tests __________?
+
+Answer 3: - A) Browser based applications
+
+4.Task of crawling is performed by a complex software which is known as:
+
+Answer 4: - D) Spider
+
+5.Which of the following commands is used to access name of a tag in Beautiful Soup?
+
+Answer 5: - B) tag.name
+
+6.Which of the following is the default parser in Beautiful Soup?
+
+Answer 6: - C) lxml
+
+7.In selenium the webdriver is used to?
+
+Answer 7: - C) execute tests on HtmlUnit browser
+
+8.In selenium, driver.find_elements_by_xpath(‘given xpath’) returns:
+
+Answer 8: - C) the list of all webelements associated with the ‘given xpath’
+
+9.The script ‘window.scrollBy(0,a) scrolls the webpage by?
+
+
+Answer 9: - ‘a’ number of pixels vertically
+
+In Q10, more than one options are correct, Choose all the correct options:
+
+10.Which of the following is(are) tags of HTML?
+
+Answer 10: - A) <a>
+             B) <b>
+ 
+Q10 to Q13 are subjective answer type questions, Answer them briefly.
+
+11.What is the main difference between a web scraper and a web crawler?
+
+Answer11: - Web Scraper is used to extract or scrape data from webpages whereas web crawlers used to create a copy of all the visited pages for later processing by a search engine, that will index the downloaded pages to provide fast searches.
+
+12.What is ‘robots.txt’ file? What is the use of ‘robots.txt’ file?
+
+Answer 12: - Robots.txt is a standard used by websites to communicate with web crawlers and other web robots. The standard specifies how to inform the web robot about which areas of the website should not be processed or scanned.
+It tells search engine crawlers which pages or files the crawler can or can't request from your site. This is used mainly to avoid overloading your site with requests; it is not a mechanism for keeping a web page out of Google.
+
+13.What are static and dynamic web pages?
+
+Answer 13: - Static website is the basic type of website that is easy to create. Its web pages are coded in HTML.
+Dynamic website is a collection of dynamic web pages whose content changes dynamically. It accesses content from a database or Content Management System (CMS). Therefore, when you alter or update the content of the database, the content of the website is also altered or updated. It uses the server side languages such as PHP, SERVLET, JSP, and ASP.NET etc. for developing a website.
+
+
+Q14 and Q15 are programming practice questions. Solve it using JUPYTER NOTEBOOK and paste the solution in your answer sheets.
+14.Write a python program to check whether a webpage contains a title or not.
+
+Answer14 :- 
+from urllib.request import urlopen
+from urllib.error import HTTPError
+from bs4 import BeautifulSoup
+def getTitle(url):
+    try:
+        html = urlopen(url)
+    except HTTPError as e:
+        return None
+    try:
+        Obj = BeautifulSoup(html.read(), "lxml")
+        title = Obj.body.h1
+    except AttributeError as e:
+        return None
+    return title
+    
+    title = getTitle(url)
+    if title == None:
+        return "Title could not be found"
+    else:
+        return title
+
+print(getTitle("https://flipkart.com"))
+
+Output: <h1>Flipkart: The One-stop Shopping Destination</h1>
+
+15.Write a python program to access the search bar and search button on images.google.com.
+
+Answer 15 :- 
+try: 
+    from googlesearch import search 
+except ImportError:  
+    print("No module named 'google' found") 
+  
+searchbar = "Flipkart"
+  
+for j in search(searchbar, tld="co.in", num=10, stop=10, pause=2): 
+    print(j)

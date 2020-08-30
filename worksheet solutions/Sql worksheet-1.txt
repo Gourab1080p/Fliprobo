@@ -1,0 +1,93 @@
+1. Which of the following is/are DDL commands in SQL?
+
+ANS:  A) Create
+      D) ALTER
+
+2. Which of the following is/are DML commands in SQL?
+ans :  A) Update B) Delete   D) Drop
+
+3.Full form of SQL is:
+
+ ANS: B) Structured Query Language
+
+4.Full form of DDL is:
+ANS  B) Data Definition Language
+
+
+5. DML is:
+ANS:  A) Data Manipulation Language
+
+
+6. Which of the following statements can be used to create a table with column B int type and C float type?
+C) Create Table A (B int,C float)
+
+7. Which of the following statements can be used to add a column D (float type) to the table A created above?
+
+ANS: B) Alter Table A ADD COLUMN D float
+
+
+8. Which of the following statements can be used to drop the column added in the above question?
+ANS:C) Delete D from A
+
+
+9 9. Which of the following statements can be used to change the data type (from float to int ) of the column D of table A created in above questions?
+D) Alter table A Column D float to int
+
+
+10 Suppose we want to make Column B of Table A as primary key of the table. By which of the following statements we can do it?
+ANS: A) Alter Table A Add Constraint Primary Key B
+
+11. What is data-warehouse?
+ANS: A data warehouse is a relational or multidimensional database that 
+is designed for query and analysis.
+Data warehouses are not optimized for transaction processing, which is the 
+domain of OLTP systems. Data warehouses usually consolidate historical and 
+analytic data derived from multiple sources. Data warehouses separate analysis
+ workload from transaction workload and enable an organization to 
+consolidate data from several sources.
+
+
+12. What is the difference between OLTP VS OLAP?
+ANS: OLTP and OLAP: The two terms look similar but refer to different kinds of systems. Online transaction processing
+ (OLTP) captures, stores, and processes data from transactions in real time. 
+Online analytical processing (OLAP) uses complex queries to analyze aggregated
+ historical data from OLTP systems
+
+An OLTP system captures and maintains transaction data in a database. Each 
+transaction involves individual database records made up of multiple fields 
+or columns. Examples include banking and credit card activity or retail checkout scanning.
+Any Datawarehouse system is an OLAP system. Uses of OLAP are as follows
+
+OLAP applies complex queries to large amounts of historical data, aggregated from OLTP databases and other sources, for data mining, analytics, and business intelligence projects. In OLAP, the emphasis is on response time to these complex queries. Each query involves one or more columns of data aggregated from many rows.
+
+A company might compare their mobile phone sales in September with sales in 
+October, then compare those results with another 
+location which may be stored in a sperate database.
+Amazon analyzes purchases by its customers to come up with a personalized homepage with products which likely interest to their customer.
+
+
+
+13. What are the various characteristics of data-warehouse?
+ANS Data Extraction-- Involves gathering data from multiple heterogeneous sources.
+Data Cleaning - Involves finding and correcting the errors in data.
+Data Transformation - Involves converting the data from legacy format to warehouse format.
+
+Data Loading - Involves sorting, summarizing, consolidating, checking integrity, and building indices and partitions.
+
+Refreshing - Involves updating from data sources to warehouse.
+
+
+14. What is Star-Schema??
+
+the star schema is the simplest style of data mart schema and is the approach most widely used to develop data warehouses
+ and dimensional data marts.[1] The star schema consists of one or more fact tables referencing any number of dimension tables. 
+The star schema is an important special case of the snowflake schema, and is more effective for handling simpler queries
+ANS:the star schema is the simplest style of data mart schema and is the approach most widely used to develop data warehouses and dimensional data marts.[1] The star schema consists of one or more fact tables referencing any number of dimension tables. The star schema is an important special case of the snowflake schema, and is more effective for handling simpler queries
+
+
+15. What do you mean by SETL?
+
+SETL provides two basic aggregate data types: unordered sets, and sequences (the latter also called tuples). The elements of sets 
+and tuples can be of any arbitrary type, including sets and tuples themselves. Maps are provided as sets of pairs (i.e., tuples of length 2) 
+and can have arbitrary domain and range types. Primitive operations in SETL include set membership, union, intersection, 
+and power set construction, among others.
