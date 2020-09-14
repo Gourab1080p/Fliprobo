@@ -116,3 +116,35 @@ if list(my_str) == list(rev_str):
    print("The string is a palindrome.")
 else:
    print("The string is not a palindrome.")
+
+
+14. Write a Python program to get the third side of right-angled triangle from two given sides.
+Ans: 
+def pythagoras(opposite_side,adjacent_side,hypotenuse):
+        if opposite_side == str("x"):
+            return ("Opposite = " + str(((hypotenuse**2) - (adjacent_side**2))**0.5))
+        elif adjacent_side == str("x"):
+            return ("Adjacent = " + str(((hypotenuse**2) - (opposite_side**2))**0.5))
+        elif hypotenuse == str("x"):
+            return ("Hypotenuse = " + str(((opposite_side**2) + (adjacent_side**2))**0.5))
+        else:
+            return "You know the answer!"
+    
+print(pythagoras(3,4,'x'))
+print(pythagoras(3,'x',5))
+print(pythagoras('x',4,5))
+print(pythagoras(3,4,5))
+
+
+15. Write a python program to print the frequency of each of the characters present in a given string.
+
+Ans:
+str=(input("Enter a String:"))
+d1= dict()
+for c in str:
+    if c in d1:
+        d1[c]=d1[c]+1
+    else:
+        d1[c]=1
+print(d1)
+
