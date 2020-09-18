@@ -1,0 +1,87 @@
+                                                                     MACHINE LEARNING – WORKSHEET 3
+
+
+
+Q1 to Q15 are subjective answer type questions, Answer them briefly.
+
+1. Give short description each of Linear, RBF, Polynomial kernels used in SVM.
+ANS - Linear Kernel is used when the data is Linearly separable, that is, it can be separated using a single Line.
+Linear - SVM works very well without any modifications for linearly separable data. 
+Linearly Separable Data is any data that can be plotted in a graph and can be separated into classes using a straight line.
+In Linear SVM, the two classes were linearly separable, i.e a single straight line is able to classify both the classes.
+
+RBF- nonlinear kernels such as the Radial Basis Function kernel for non-linear problems.
+The RBF kernel SVM decision region is actually also a linear decision region. RBF kernel SVM actually does is to create non-linear combinations of your 
+features to uplift your samples onto a higher-dimensional feature space where you can use a linear decision boundary to separate your classes.
+
+Polynomial-In machine learning, the polynomial kernel is a kernel function commonly used with support vector machines (SVMs) and other kernelized models, 
+that represents the similarity of vectors (training samples) in a feature space over polynomials of the original variables, allowing learning of non-linear models.
+
+2.R-squared or Residual Sum of Squares (RSS) which one of these two is a better measure of goodness of fit of model in regression and why??
+ANS- R-Squared (R² or the coefficient of determination) is a statistical measure in a regression model that determines the proportion of variance in the 
+dependent variable that can be explained by the independent variable.In other words, r-squared shows how well the data fit the regression model (the goodness of fit).
+
+3. What are TSS (Total Sum of Squares), ESS (Explained Sum of Squares) and RSS (Residual Sum of Squares) in regression. Also mention the equation relating these three metrics with each other
+ANS-Total Sum Of Squares-Sum of squares is a measure of how a data set varies around a central number (like the mean).
+    Explained Sum  of Squares-The Explained SS tells you how much of the variation in the dependent variable your model explained.
+                               Explained SS = Σ(Y-Hat – mean of Y)2.   
+Residual Sum of Squares-The residual sum of squares tells you how much of the dependent variable’s variation your model did not explain. 
+It is the sum of the squared differences between the actual Y and the predicted Y.
+Basic relation formula-Total Sum of Squares=Explained Sum  of Squares + Residual Sum of Squares.
+
+4. What is Gini –impurity index?
+ANS-Gini impurity, calculates the amount of probability of a specific feature that is classified incorrectly when selected randomly. If all the elements are linked with a single class then it can be called pure.
+
+5. Are unregularized decision-trees prone to overfitting? If yes, why?
+ANS-In some cases it prone to overfitting because many time data are so complex and if we apply algorithm like Decisio Tree then we have to take care about the impurity of the splliting of the data
+    or branches.we have to reduce the impurity of the branches,if we simply apply Decision Tree algorithm without any unregularization then their is high possibility that impurity will occurs and the model
+    will move towards overfitting.
+    In that case it's better to regularized the data to aware about better parameter. 
+
+6.What is an ensemble technique in machine learning?
+ANS - Ensemble learning combines the predictions from multiple neural network models to reduce the variance of predictions and reduce generalization error. Techniques for ensemble learning can be grouped by the element that is varied, such as training data, the model, and how predictions are combined.
+
+7.What is the difference between Bagging and Boosting techniques?
+ANS- Bagging is a way to decrease the variance in the prediction by generating additional data for training from dataset using combinations with repetitions to produce multi-sets of the original data. Boosting is an iterative technique which adjusts the weight of an observation based on the last classification.
+
+8.what is out-of-bag error in random forests?
+Ans-It is a method of measuring the prediction error of random forests, boosted decision trees, and other machine learning models utilizing bootstrap aggregating (bagging) to sub-sample data samples used for training.
+
+9.What is K-fold cross-validation?
+ANS- k-Fold Cross-Validation Cross-validation is a resampling procedure used to evaluate machine learning models on a limited data sample. 
+The procedure has a single parameter called k that refers to the number of groups that a given data sample is to be split into.
+ As such, the procedure is often called k-fold cross-validation.
+
+10.What is hyper parameter tuning in machine learning and why it is done?
+ANS - A hyperparameter is a parameter whose value is set before the learning process begins.These parameters express important properties of the model such as its complexity or how fast it should learn.
+
+11.What issues can occur if we have a large learning rate in Gradient Descent?
+ANS -When the learning rate is too large, gradient descent can inadvertently increase rather than decrease the training error.
+
+12.What is bias-variance trade off in machine learning?
+ANS - BIAS - The bias is known as the difference between the prediction of the values by the ML model and the correct value. Being high in biasing gives a 
+large error in training as well as testing data. Its recommended that an algorithm should always be low biased to avoid the problem of underfitting.
+By high bias, the data predicted is in a straight line format, thus not fitting accurately in the data in the data set. 
+Such fitting is known as Underfitting of Data. This happens when the hypothesis is too simple or linear in nature
+
+Variance - The variability of model prediction for a given data point which tells us spread of our data is called the variance of the model. 
+The model with high variance has a very complex fit to the training data and thus is not able to fit accurately on the data which it hasn’t seen before. 
+As a result, such models perform very well on training data but has high error rates on test data.
+When a model is high on variance, it is then said to as Overfitting of Data. 
+Overfitting is fitting the training set accurately via complex curve and high order hypothesis but is not the solution as the error with unseen data is high.
+While training a data model variance should be kept low.
+
+13.What is the need of regularization in machine learning?
+ANS -Regularization, significantly reduces the variance of the model, without substantial increase in its bias.  As the value of λ rises, it reduces the value of 
+coefficients and thus reducing the variance. Till a point, this increase in λ is beneficial as it is only reducing the variance(hence avoiding overfitting),
+without loosing any important properties in the data. But after certain value, the model starts loosing important properties, giving rise to bias in the model and 
+thus underfitting. Therefore, the value of λ should be carefully selected.
+
+14.Differentiate between Adaboost and Gradient Boosting
+ANS-The main differences therefore are that Gradient Boosting is a generic algorithm to find approximate solutions to the additive modeling problem, 
+while AdaBoost can be seen as a special case with a particular loss function. Hence, gradient boosting is much more flexible.Second, AdaBoost can be interepted from a
+much more intuitive perspective and can be implemented without the reference to gradients by reweighting the training samples based on classifications from 
+previous learners.
+
+15.Can we use Logistic Regression for classification of Non-Linear Data? If not, why?
+ANS- We can use Logistic regression for clasification of Non-linear data but i think it doesn't performs well in that case Logistic regression is considered a generalized linear model because the outcome always depends on the sum of the inputs and parameters.Or in other words, the output cannot depend on the product (or quotient, etc.) of its parameters.it has traditionally been used to come up with a hyperplane that separates the feature space into classes But if we suspect that the decision boundary is nonlinear we may get better results by attempting some nonlinear functional forms for the logit function.
